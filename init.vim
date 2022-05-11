@@ -1,9 +1,11 @@
 " config.vim
-let mapleader = " " " Set leader key to space to call which-key
+let mapleader = " "       " Set leader key to space to call which-key
 
+set encoding=utf-8
 set number                " Show numbers on the left
 set relativenumber
 set noshowmode
+set showtabline=2         " Always show tabs
 set hlsearch              " Highlight search results
 set guicursor=a:block     " Force cursor to be a block at all times
 set ignorecase            " Search ingnoring case
@@ -14,8 +16,8 @@ set tabstop=4             " Tab size of 4 spaces
 set softtabstop=4         " On insert use 4 spaces for tab
 set shiftwidth=4
 set expandtab             " Use apropiate number of spaces
-set linebreak " Respect WORDS when wrap-breaking lines (see wrap)
-set wrap " Continue on the next line if insufficient columns (see linebreak)
+set linebreak             " Respect WORDS when wrap-breaking lines (see wrap)
+set wrap                  " Continue on the next line if insufficient columns (see linebreak)
 set noswapfile            " Do not leve any backup files
 set mouse=a               " Enable mouse on all modes
 set clipboard=unnamed,unnamedplus     " Use the OS clipboard
@@ -48,7 +50,18 @@ vnoremap K :m '<-2<CR>gv=gv
   "autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 "endif
 
+"===================Sources====================
+
+"source ~/AppData/Local/nvim/plugins/
+
+"===================Sources====================
+
+
+
+"===================================================================================
 " Plugins
+"===================================================================================
+
 call plug#begin('~/.vim/plugged')
 
 "Plug 'tpope/vim-sensible'         " Sensible defaults
@@ -87,13 +100,17 @@ Plug 'alvan/vim-closetag'
 Plug 'ryanoasis/vim-devicons'
 Plug 'terryma/vim-multiple-cursors'
 
-Plug  'mattn/webapi-vim'
+Plug 'mattn/webapi-vim'
 
+"Git integration
+Plug 'mhinz/vim-signify'          
+Plug 'tpope/vim-fugitive'             "Para los comandos de git
 
-Plug  'AndrewRadev/tagalong.vim'
+Plug 'AndrewRadev/tagalong.vim'
 
-
-
+"TablineThemes
+"Plug 'kyazdani42/nvim-web-devicons'
+"Plug 'romgrk/barbar.nvim'
 
 
 
@@ -329,8 +346,9 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
-let g:ariline_powerline_fonts = 1
-let g:ariline_theme='dracula'
+
+"enable powerline fonts
+let g:airline_powerline_fonts = 1
 
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -348,17 +366,17 @@ let g:airline_symbols.linenr = ''
 " Switch to your current theme
 let g:airline_theme='dracula'
 
-" Always show tabs
-set showtabline=2
-
 "Git integration config
-let g:signify_sign_add               = '+'
-let g:signify_sign_delete            = '_'
-let g:signify_sign_delete_first_line = '‾'
-let g:signify_sign_change            = '~'
+ let g:signify_sign_add               = '+'
+ let g:signify_sign_delete            = '_'
+ let g:signify_sign_delete_first_line = '‾'
+ let g:signify_sign_change            = '~'
 
+" I find the numbers disctracting
+ let g:signify_sign_show_count = 0
+ let g:signify_sign_show_text = 1
 
-
+"============================================
 " TAB in general mode will move to text buffer
 " TAB en modo normal se moverá al siguiente buffer
 nnoremap <silent> <TAB> :bnext<CR>
@@ -377,7 +395,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 
-"colorizar-config
+"colorizer-config
 let g:colorizer_auto_color = 0
 let g:colorizer_auto_filetype='css,html'
 let g:colorizer_skip_comments = 1
