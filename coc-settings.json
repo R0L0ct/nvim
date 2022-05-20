@@ -1,5 +1,6 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "typescript.tsx", "typescriptreact", "javascriptreact", "typescript"], 
+  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "typescript.tsx", "typescriptreact", "javascriptreact", "typescript"],
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
@@ -7,5 +8,5 @@
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   }
-}
 
+}

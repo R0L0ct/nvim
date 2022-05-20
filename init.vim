@@ -4,12 +4,13 @@ let mapleader = " "       " Set leader key to space to call which-key
 set hidden
 set nobackup
 set nowritebackup
+set updatetime=100
 set cmdheight=2
 set shortmess+=c
 set nocompatible
 set encoding=utf-8
 set number                " Show numbers on the left
-set signcolumn=no
+"set signcolumn=no
 set relativenumber
 set scrolloff=5
 set noshowmode
@@ -47,11 +48,6 @@ vmap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-"===================Sources====================
-
-source ~/AppData/Local/nvim/plugins/coc-settings.vim
-source ~/AppData/Local/nvim/plugins/automations.vim
-"==============================================
 
 "===================================================================================
 " Plugins
@@ -71,8 +67,8 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'sheerun/vim-polyglot'
 
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope.nvim'
 
 "Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'pangloss/vim-javascript'
@@ -83,13 +79,14 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'mattn/emmet-vim'
 
 Plug 'tpope/vim-commentary'
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'               "syntax checking and semantic errors
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-surround'
-Plug 'chrisbra/colorizer'
+"Plug 'ap/vim-css-color'
+Plug 'norcalli/nvim-colorizer.lua'
 
 Plug 'alvan/vim-closetag'
 "Plug 'jiangmiao/auto-pairs'
@@ -97,10 +94,10 @@ Plug 'alvan/vim-closetag'
 Plug 'ryanoasis/vim-devicons'
 Plug 'terryma/vim-multiple-cursors'
 
-Plug 'mattn/webapi-vim'
+Plug 'mattn/webapi-vim'                  "An Interface to WEB APIs
 
 "Git integration
-"Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'             "Para los comandos de git
 
 Plug 'AndrewRadev/tagalong.vim'
@@ -110,6 +107,15 @@ Plug 'AndrewRadev/tagalong.vim'
 "Plug 'romgrk/barbar.nvim'
 
 call plug#end()
+
+"===================Sources====================
+
+source ~/AppData/Local/nvim/plugins/coc-settings.vim
+source ~/AppData/Local/nvim/plugins/automations.vim
+
+luafile ~/AppData/Local/nvim/lua/plug-colorizer.lua
+"==============================================
+
 "==============================================================================
 "key combos
 "==============================================================================
@@ -139,9 +145,10 @@ let g:coc_global_extensions = [
     \ 'coc-python',
 	\ 'coc-diagnostic',
 	\ 'coc-snippets',
-	\ 'coc-pairs',
+    \ 'coc-pairs',
 	\ 'coc-vimtex',
-	\ 'coc-angular'
+	\ 'coc-angular',
+    \ 'coc-lua'
     \]
 
 "----------------------------------------------------------------
@@ -195,16 +202,6 @@ nnoremap <silent> <S-TAB> :bprevious<CR>
 "cerrar buffer
 nmap <leader>bd :bdelete<CR>
 
-"Telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-"colorizer-config
-let g:colorizer_auto_color = 0
-let g:colorizer_auto_filetype='css,html'
-let g:colorizer_skip_comments = 1
 
 "Cerrar tags automaticamente
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js'
@@ -215,7 +212,7 @@ autocmd FileType html,css EmmetInstall
 let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_leader_key=','
 let g:user_emmet_settings = {
-\  'variables': {'lang': 'ja'},
+\  'variables': {'lang': 'en'},
 \  'html': {
 \    'default_attributes': {
 \      'option': {'value': v:null},
@@ -226,6 +223,7 @@ let g:user_emmet_settings = {
 \              ."<html lang=\"${lang}\">\n"
 \              ."<head>\n"
 \              ."\t<meta charset=\"${charset}\">\n"
+\              ."\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n"
 \              ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
 \              ."\t<title></title>\n"
 \              ."</head>\n"
@@ -239,10 +237,13 @@ let g:user_emmet_settings = {
 "tagalong
 let g:tagalong_filetypes = ['html']
 
+"NERDTREE
 " Use Ctrl-k Ctrl-k to open a sidebar with the list of files
-map <C-k><C-k> :NERDTreeToggle<cr>
+nnoremap <leader>nt :NERDTreeToggle<cr>
+
+" FZF
 " Use Ctrl-P to open the fuzzy file opener
-nnoremap <C-p> :Files<cr>
+nnoremap <leader>p :Files<cr>
 
 "=============================================================================
 "VIM-Autoclose-tags-config
