@@ -66,7 +66,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intelisense
 Plug 'Yggdroot/indentLine'
 
 Plug 'sheerun/vim-polyglot'
-
+Plug 'vim-scripts/loremipsum'
 "Plug 'nvim-lua/plenary.nvim'
 "Plug 'nvim-telescope/telescope.nvim'
 
@@ -80,6 +80,8 @@ Plug 'mattn/emmet-vim'
 
 Plug 'tpope/vim-commentary'
 Plug 'dense-analysis/ale'               "syntax checking and semantic errors
+
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -243,8 +245,9 @@ nnoremap <leader>nt :NERDTreeToggle<cr>
 
 " FZF
 " Use Ctrl-P to open the fuzzy file opener
-nnoremap <leader>p :Files<cr>
-
+nnoremap <leader>ff :Files<cr>
+"prettier
+nmap <Leader>py <Plug>(Prettier)
 "=============================================================================
 "VIM-Autoclose-tags-config
 "=============================================================================
@@ -292,7 +295,6 @@ let g:closetag_shortcut = '>'
 "let g:closetag_close_shortcut = '<leader>>'
 "=============================================================================
 "=============================================================================
-
 
 
 
