@@ -26,6 +26,8 @@ use {
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
 
+use 'p00f/nvim-ts-rainbow'
+
 -- Desarrollo Web
 use 'norcalli/nvim-colorizer.lua'
 use 'tpope/vim-surround'
