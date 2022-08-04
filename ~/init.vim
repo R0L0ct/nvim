@@ -9,11 +9,11 @@ set cmdheight=2
 set shortmess+=c
 set nocompatible
 set encoding=utf-8
-set number                " Show numbers on the left
+" set number                " Show numbers on the left
 "set signcolumn=no
-set relativenumber
+" set relativenumber
 set scrolloff=5
-set noshowmode
+"set noshowmode
 set showtabline=2         " Always show tabs
 set hlsearch              " Highlight search results
 set guicursor=a:block     " Force cursor to be a block at all times
@@ -24,13 +24,13 @@ set belloff=esc
 set tabstop=4             " Tab size of 4 spaces
 set softtabstop=0         " do not insert spaces when pressing tab
 set shiftwidth=0          "force indent spaces to equal to tabstop
-set showcmd
+set showcmd               "show commands
 set smarttab              "treat spaces as tabs in increments of shiftwidth
 set noexpandtab             " Use apropiate number of spaces
 set linebreak             " Respect WORDS when wrap-breaking lines (see wrap)
 set wrap                  " Continue on the next line if insufficient columns (see linebreak)
 set noswapfile            " Do not leve any backup files
-set mouse=a               " Enable mouse on all modes
+" set mouse=a               " Enable mouse on all modes
 set clipboard=unnamed,unnamedplus     " Use the OS clipboard
 set showmatch
 set termguicolors
@@ -56,14 +56,28 @@ vnoremap K :m '<-2<CR>gv=gv
 call plug#begin('~/.vim/plugged')
 
 "Plug 'tpope/vim-sensible'         " Sensible defaults
-Plug 'dracula/vim', { 'as': 'dracula' } "theme
+" Plug 'dracula/vim', { 'as': 'dracula' } "theme
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " File navigator
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }     " Install fuzzy finder binary
 Plug 'junegunn/fzf.vim'               " Enable fuzzy finder in Vim
 Plug 'editorconfig/editorconfig-vim'  " Tab/Space trough projects
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intelisense
+"Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intelisense
 
-Plug 'Yggdroot/indentLine'
+"LSP
+Plug 'neovim/nvim-lspconfig'           "Enable LSP
+"LSP Auto-Complete
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+
+Plug 'mfussenegger/nvim-jdtls'            "Java LSP
+
+
+" Plug 'Yggdroot/indentLine'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/loremipsum'
@@ -83,8 +97,8 @@ Plug 'dense-analysis/ale'               "syntax checking and semantic errors
 
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-surround'
 "Plug 'ap/vim-css-color'
@@ -94,13 +108,13 @@ Plug 'alvan/vim-closetag'
 "Plug 'jiangmiao/auto-pairs'
 
 Plug 'ryanoasis/vim-devicons'
-Plug 'terryma/vim-multiple-cursors'
+" Plug 'terryma/vim-multiple-cursors'
 
-Plug 'mattn/webapi-vim'                  "An Interface to WEB APIs
+" Plug 'mattn/webapi-vim'                  "An Interface to WEB APIs
 
 "Git integration
-Plug 'mhinz/vim-signify'
-Plug 'tpope/vim-fugitive'             "Para los comandos de git
+" Plug 'mhinz/vim-signify'
+" Plug 'tpope/vim-fugitive'             "Para los comandos de git
 
 Plug 'AndrewRadev/tagalong.vim'
 
@@ -112,10 +126,11 @@ call plug#end()
 
 "===================Sources====================
 
-source ~/AppData/Local/nvim/plugins/coc-settings.vim
+"source ~/AppData/Local/nvim/plugins/coc-settings.vim
 source ~/AppData/Local/nvim/plugins/automations.vim
 
 luafile ~/AppData/Local/nvim/lua/plug-colorizer.lua
+luafile ~/AppData/Local/nvim/lua/language-servers.lua
 "==============================================
 
 "==============================================================================
@@ -138,29 +153,29 @@ command! Wqa wqa " Write-quit all while still pressing Shift
 "-----------COC-SETTINGS------------------------------------
 "-----------------------------------------------------------\
 
-let g:coc_global_extensions = [
-    \ 'coc-tsserver',
-    \ 'coc-json',
-    \ 'coc-html',
-    \ 'coc-css',
-    \ 'coc-phpls',
-    \ 'coc-python',
-	\ 'coc-diagnostic',
-	\ 'coc-snippets',
-    \ 'coc-pairs',
-	\ 'coc-vimtex',
-	\ 'coc-angular',
-    \ 'coc-lua'
-    \]
+" let g:coc_global_extensions = [
+"     \ 'coc-json',
+"     \ 'coc-phpls',
+"     \ 'coc-python',
+" 	\ 'coc-diagnostic',
+" 	\ 'coc-snippets',
+"     \ 'coc-pairs',
+" 	\ 'coc-vimtex',
+" 	\ 'coc-angular',
+"     \ 'coc-lua'
+"     \]
 
+    " \ 'coc-html',
+    " \ 'coc-css',
+    " \ 'coc-tsserver',
 "----------------------------------------------------------------
 "----------------------------------------------------------------
 
 "INDENTLINE configuracion de tabs
-let g:indentLine_enabled = 1
-let g:indentLine_char = '|'
-let g:indentLine_faster = 1
-let g:indentLine_fileTypeExclude=["nerdtree"]
+" let g:indentLine_enabled = 1
+" let g:indentLine_char = '|'
+" let g:indentLine_faster = 1
+" let g:indentLine_fileTypeExclude=["nerdtree"]
 "===============================================================
 "===============================================================
 
@@ -168,30 +183,30 @@ let g:indentLine_fileTypeExclude=["nerdtree"]
 "█▀█ █ █▀▄ █▄▄ █ █░▀█ ██▄
 
 " enable tabline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#left_sep = ''
+" let g:airline#extensions#tabline#left_alt_sep = ''
+" let g:airline#extensions#tabline#right_sep = ''
+" let g:airline#extensions#tabline#right_alt_sep = ''
 
 "enable powerline fonts
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
-  if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-  endif
+  " if !exists('g:airline_symbols')
+  "   let g:airline_symbols = {}
+  " endif
 
 " airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_symbols.branch = ''
+" let g:airline_symbols.readonly = ''
+" let g:airline_symbols.linenr = ''
 
 " Switch to your current theme
-let g:airline_theme='dracula'
+" let g:airline_theme='dracula'
 
 "============================================
 " TAB in general mode will move to text buffer
@@ -299,4 +314,4 @@ let g:closetag_shortcut = '>'
 
 
 "Themes
-colorscheme dracula " Activate the theme
+"colorscheme dracula " Activate the theme

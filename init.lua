@@ -1,0 +1,11 @@
+require  "mappings.mappings" 
+require  "settings.settings"  
+require  "plugins.packer" 
+require  "plugins.lsp-config"   
+require  "plugins.plug-colorizer"   
+require  "plugins.telescope"   
+require  "plugins.nvim-treesitter"   
+require  "plugins.vim-surround"   
+require  "plugins.vim-commentary"   
+require  "plugins.emmet-lsp"   
+

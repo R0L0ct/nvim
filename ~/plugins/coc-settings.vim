@@ -136,3 +136,17 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+{
+"languageserver": {
+  "ccls": {
+    "command": "ccls",
+    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+    "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+  }
+}
+}
