@@ -3,7 +3,6 @@ return require'packer'.startup(function()
 use 'wbthomason/packer.nvim'
 
 --LSP
-use 'williamboman/nvim-lsp-installer'
 use 'neovim/nvim-lspconfig'
 --LSP Auto-complete
 use 'hrsh7th/nvim-cmp'
@@ -37,6 +36,18 @@ use 'tpope/vim-commentary'
 
 --TEMAS
 use 'bluz71/vim-moonfly-colors'
+use 'tomasr/molokai'
+use 'morhetz/gruvbox'
+use 'marcopaganini/mojave-vim-theme'
+
+
+
+
+
+
+
+
+
 
 end)
 

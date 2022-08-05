@@ -10,7 +10,8 @@ call plug#end()
 "INIT.LUA
 luafile ~/AppData/Local/nvim/lua/init.lua
 "==============================================
-let g:kite_supported_languages = ['c', 'cpp', 'cc']
+let g:kite_supported_languages = ['c', 'cpp', 'cc', 'java']
 
 
-colorscheme moonfly
+let g:moonflyItalics = v:false
+colorscheme moonfly 
