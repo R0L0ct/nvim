@@ -8,5 +8,5 @@ require  "plugins.nvim-treesitter"
 require  "plugins.vim-surround"   
 require  "plugins.vim-commentary"   
 require  "plugins.emmet-lsp"   
-
+require  "plugins.mason" 
 

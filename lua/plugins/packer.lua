@@ -4,7 +4,6 @@ use 'wbthomason/packer.nvim'
 
 --LSP
 use 'neovim/nvim-lspconfig'
---LSP Auto-complete
 use 'hrsh7th/nvim-cmp'
 use 'hrsh7th/cmp-nvim-lsp'
 use 'hrsh7th/cmp-buffer'
@@ -12,6 +11,18 @@ use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
 use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
+
+--LSP Mason
+use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",    
+}
+
+use 'mfussenegger/nvim-dap'  --debugger
+use 'mfussenegger/nvim-lint' --diagnostic
+use 'mhartington/formatter.nvim' 
+
+
 
 --Telescope
 use {
@@ -38,13 +49,6 @@ use 'tpope/vim-commentary'
 use 'bluz71/vim-moonfly-colors'
 use 'tomasr/molokai'
 use 'morhetz/gruvbox'
-use 'marcopaganini/mojave-vim-theme'
-
-
-
-
-
-
 
 
 
