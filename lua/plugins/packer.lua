@@ -44,6 +44,7 @@ use 'norcalli/nvim-colorizer.lua'
 use 'tpope/vim-surround'
 use 'jiangmiao/auto-pairs'
 use 'tpope/vim-commentary'
+use 'alvan/vim-closetag'
 
 --TEMAS
 use 'bluz71/vim-moonfly-colors'

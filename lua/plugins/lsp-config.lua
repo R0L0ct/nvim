@@ -20,13 +20,14 @@ require'lspconfig'.tsserver.setup {
    capabilities = capabilities,
  }
 
- require'lspconfig'.clangd.setup {
-   capabilities = capabilities,
- }
-
  require'lspconfig'.sumneko_lua.setup {
    capabilities = capabilities,
  }
+
+ require'lspconfig'.vimls.setup {
+   capabilities = capabilities,
+ }
+
  -- Setup nvim-cmp.
 local cmp = require'cmp'
 
