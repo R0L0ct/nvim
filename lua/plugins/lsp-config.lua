@@ -28,6 +28,7 @@ require'lspconfig'.tsserver.setup {
    capabilities = capabilities,
  }
 
+
  -- Setup nvim-cmp.
 local cmp = require'cmp'
 

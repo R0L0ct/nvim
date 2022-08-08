@@ -3,26 +3,24 @@ return require'packer'.startup(function()
 use 'wbthomason/packer.nvim'
 
 --LSP
-use 'neovim/nvim-lspconfig'
-use 'hrsh7th/nvim-cmp'
-use 'hrsh7th/cmp-nvim-lsp'
-use 'hrsh7th/cmp-buffer'
-use 'hrsh7th/cmp-path'
-use 'hrsh7th/cmp-cmdline'
-use 'L3MON4D3/LuaSnip'
-use 'saadparwaiz1/cmp_luasnip'
-
+-- use 'neovim/nvim-lspconfig'
+-- use 'hrsh7th/nvim-cmp'
+-- use 'hrsh7th/cmp-nvim-lsp'
+-- use 'hrsh7th/cmp-buffer'
+-- use 'hrsh7th/cmp-path'
+-- use 'hrsh7th/cmp-cmdline'
+-- use 'L3MON4D3/LuaSnip'
+-- use 'saadparwaiz1/cmp_luasnip'
+    
 --LSP Mason
-use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",    
-}
+-- use {
+--     "williamboman/mason.nvim",
+--     "williamboman/mason-lspconfig.nvim",    
+-- }
 
 use 'mfussenegger/nvim-dap'  --debugger
 use 'mfussenegger/nvim-lint' --diagnostic
 use 'mhartington/formatter.nvim' 
-
-
 
 --Telescope
 use {
@@ -42,7 +40,7 @@ use 'p00f/nvim-ts-rainbow'
 -- Desarrollo Web
 use 'norcalli/nvim-colorizer.lua'
 use 'tpope/vim-surround'
-use 'jiangmiao/auto-pairs'
+-- use 'jiangmiao/auto-pairs'
 use 'tpope/vim-commentary'
 use 'alvan/vim-closetag'
 

@@ -1,10 +1,11 @@
 
 local set = vim.opt
 
-set.expandtab = true
+set.expandtab = false
 set.smarttab = true
-set.shiftwidth = 4
+set.shiftwidth = 0
 set.tabstop = 4
+set.softtabstop = 0
 
 set.hlsearch = true
 set.incsearch = true
