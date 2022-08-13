@@ -6,7 +6,4 @@ require  "plugins.telescope"
 require  "plugins.nvim-treesitter"   
 require  "plugins.vim-surround"   
 require  "plugins.vim-commentary"   
--- require  "plugins.emmet-lsp"   
--- require  "plugins.mason" 
--- require  "plugins.lsp-config"   
-
+require  "plugins.lualine"

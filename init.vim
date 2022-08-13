@@ -36,6 +36,8 @@ let g:coc_global_extensions = [
 "Kite Config
 " let g:kite_supported_languages = ['c', 'cpp', 'cc', 'java']
 
+"Gcc - compilador 
+map <F5> :!g++ -g % -o %:r <CR>       
 
 "Temas
 let g:moonflyItalics = v:false
