@@ -3,19 +3,17 @@ return require'packer'.startup(function()
 --PLUGINS MANAGER
 use 'wbthomason/packer.nvim'
 
---STATUS LINE
-use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-}
+--STATUS LINE/TABS
+use 'vim-airline/vim-airline'
+use 'vim-airline/vim-airline-themes'
+use 'ryanoasis/vim-devicons'
 
---BUFFER LINE
-use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 -----------------------------------------
 use 'mfussenegger/nvim-dap'  --debugger
 use 'mfussenegger/nvim-lint' --diagnostic
 use 'mhartington/formatter.nvim' 
 -----------------------------------------
+
 --Telescope
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',

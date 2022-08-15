@@ -36,6 +36,10 @@ let g:coc_global_extensions = [
 "Kite Config
 " let g:kite_supported_languages = ['c', 'cpp', 'cc', 'java']
 
+"Air-Line-Config
+let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
+
 "Gcc - compilador 
 map <F5> :!g++ -g % -o %:r <CR>       
 
