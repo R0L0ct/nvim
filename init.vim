@@ -40,9 +40,12 @@ let g:coc_global_extensions = [
 let g:airline#extensions#tabline#enabled = 1
 " let g:airline_powerline_fonts = 1
 
+"NERDtree
+nnoremap <leader>nt :NERDTreeToggle<cr>
+
 "Gcc - compilador 
 map <F5> :!g++ -g % -o %:r <CR>       
 
 "Temas
 let g:moonflyItalics = v:false
-colorscheme moonfly 
+colorscheme gruvbox 
