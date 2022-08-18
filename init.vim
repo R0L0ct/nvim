@@ -46,6 +46,12 @@ nnoremap <leader>nt :NERDTreeToggle<cr>
 "Gcc - compilador 
 map <F5> :!g++ -g % -o %:r <CR>       
 
+"EJS_FILETYPE
+if has("autocmd")
+    au BufRead,BufNewFile *.ejs setfiletype html
+endif
+
+
 "Temas
 let g:moonflyItalics = v:false
 colorscheme gruvbox 
