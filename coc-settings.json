@@ -24,4 +24,5 @@
     "vue-html": "html",
     "javascript": "javascriptreact"
   },
+	"snippets.userSnippetsDirectory": "C:/Users/Administrator/AppData/Local/nvim/snips",
 }
