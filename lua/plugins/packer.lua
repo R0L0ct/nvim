@@ -8,6 +8,9 @@ use 'vim-airline/vim-airline'
 use 'vim-airline/vim-airline-themes'
 use 'ryanoasis/vim-devicons'
 
+--Close buffers without closing splits
+use 'qpkorr/vim-bufkill'
+
 --NERDtree
 use 'preservim/nerdtree'
 
@@ -24,10 +27,6 @@ use 'alvan/vim-closetag'
 use 'bluz71/vim-moonfly-colors'
 use 'tomasr/molokai'
 use 'morhetz/gruvbox'
-
---SNIPS
-use 'SirVer/ultisnips'
-
 
 end)
 

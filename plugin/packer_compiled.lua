@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\Administrator\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ultisnips = {
-    loaded = true,
-    path = "C:\\Users\\Administrator\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ultisnips",
-    url = "https://github.com/SirVer/ultisnips"
-  },
   ["vim-airline"] = {
     loaded = true,
     path = "C:\\Users\\Administrator\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline",
@@ -108,6 +103,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Administrator\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline-themes",
     url = "https://github.com/vim-airline/vim-airline-themes"
+  },
+  ["vim-bufkill"] = {
+    loaded = true,
+    path = "C:\\Users\\Administrator\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-bufkill",
+    url = "https://github.com/qpkorr/vim-bufkill"
   },
   ["vim-closetag"] = {
     loaded = true,

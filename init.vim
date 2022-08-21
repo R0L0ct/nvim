@@ -49,7 +49,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 "NERDtree
 nnoremap <leader>nt :NERDTreeToggle<cr>
-
+let NERDTreeShowHidden=1
 "Gcc - compilador 
 map <F5> :!g++ -g % -o %:r <CR>       
 
