@@ -33,16 +33,18 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
+  tabline = {
+		lualine_a = {'filename'}
+	},
   winbar = {},
   inactive_winbar = {},
   extensions = {}
 }
 
-require("bufferline").setup{
-	options = {
-       buffer_close_icon = '',
-       close_icon = '',
-	}
-}
+-- require("bufferline").setup{
+-- 	options = {
+--        buffer_close_icon = '',
+--        close_icon = '',
+-- 	}
+-- }
 
