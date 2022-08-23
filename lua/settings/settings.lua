@@ -27,3 +27,4 @@ set.relativenumber = false
 set.cursorline = true
 
 set.hidden = true
+
