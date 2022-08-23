@@ -43,9 +43,6 @@ let g:ruby_host_prog = 'E:/Ruby31-x64/bin/neovim-ruby-host'
 "Gcc - compilador 
 map <F5> :!g++ -g % -o %:r <CR>       
 
-"NERDTree
-let NERDTreeShowHidden=1
-
 "EJS_FILETYPE
 if has("autocmd")
     au BufRead,BufNewFile *.ejs setfiletype html

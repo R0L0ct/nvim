@@ -10,9 +10,14 @@ use {
 }
 -- use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
--- NERDTREE -- 
-use 'preservim/nerdtree'
-use 'ryanoasis/vim-devicons'
+-- NVIM TREE --
+use {
+  'kyazdani42/nvim-tree.lua',
+  requires = {
+    'kyazdani42/nvim-web-devicons', -- optional, for file icons
+  },
+  tag = 'nightly' -- optional, updated every week. (see issue #1193)
+}
 
 --Close buffers without closing splits
 use 'qpkorr/vim-bufkill'

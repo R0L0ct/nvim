@@ -44,5 +44,5 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- LEX EXPLORE --
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
--- NERDTREE --
-keymap("n", "<leader>nt", ":NERDTreeToggle<cr>", opts)
+-- NVIM TREE --
+keymap("n", "<leader>nt", ":NvimTreeToggle<cr>", opts)
