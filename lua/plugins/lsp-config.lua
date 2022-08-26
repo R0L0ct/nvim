@@ -1,4 +1,3 @@
-require("nvim-lsp-installer").setup {}
 -- Setup nvim-cmp
 require'cmp'.setup {
   sources = {
@@ -14,6 +13,10 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
  }
 
  require'lspconfig'.cssls.setup {
+   capabilities = capabilities,
+ }
+
+ require'lspconfig'.tsserver.setup {
    capabilities = capabilities,
  }
 
@@ -33,7 +36,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
    capabilities = capabilities,
  }
 
- require'lspconfig'.tsserver.setup {
+ require'lspconfig'.sqls.setup{
    capabilities = capabilities,
  }
 

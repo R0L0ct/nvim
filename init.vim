@@ -2,36 +2,36 @@
 "===================================================================================
 " Plugins
 "===================================================================================
-call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
+ " call plug#begin('~/.vim/plugged')
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ " call plug#end()
 "===================Sources====================
 
 "INIT.LUA
 luafile ~/AppData/Local/nvim/lua/init.lua
 "==============================================
-source ~/AppData/Local/nvim/coc.vim
+" source ~/AppData/Local/nvim/coc.vim
 
-let g:coc_global_extensions = [
-    \ 'coc-json',
-    \ 'coc-phpls',
-    \ 'coc-python',
-	\ 'coc-diagnostic',
-	\ 'coc-snippets',
-    \ 'coc-pairs',
-	\ 'coc-vimtex',
-	\ 'coc-angular',
-    \ 'coc-lua',
-    \ 'coc-html',
-    \ 'coc-sql',
-    \ 'coc-css',
-    \ 'coc-tsserver',
-    \ 'coc-clangd',
-    \ 'coc-java',
-    \ 'coc-prettier',
-    \ 'coc-emmet',
-    \ 'coc-lists',
-    \ 'coc-vimlsp']
+" let g:coc_global_extensions = [
+"     \ 'coc-json',
+"     \ 'coc-phpls',
+"     \ 'coc-python',
+" 	\ 'coc-diagnostic',
+" 	\ 'coc-snippets',
+"     \ 'coc-pairs',
+" 	\ 'coc-vimtex',
+" 	\ 'coc-angular',
+"     \ 'coc-lua',
+"     \ 'coc-html',
+"     \ 'coc-sql',
+"     \ 'coc-css',
+"     \ 'coc-tsserver',
+"     \ 'coc-clangd',
+"     \ 'coc-java',
+"     \ 'coc-prettier',
+"     \ 'coc-emmet',
+"     \ 'coc-lists',
+"     \ 'coc-vimlsp']
 
 "Kite Config
 " let g:kite_supported_languages = ['c', 'cpp', 'cc', 'java']
@@ -42,6 +42,7 @@ let g:ruby_host_prog = 'E:/Ruby31-x64/bin/neovim-ruby-host'
 
 "Gcc - compilador 
 map <F5> :!g++ -g % -o %:r <CR>       
+
 
 "EJS_FILETYPE
 if has("autocmd")

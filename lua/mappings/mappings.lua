@@ -46,3 +46,11 @@ keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- NVIM TREE --
 keymap("n", "<leader>nt", ":NvimTreeToggle<cr>", opts)
+
+-- Format --
+keymap("n", "<leader>f", ":Format<cr>", opts)
+
+-- TELESCOPE --
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>", {buffer=0})
+
