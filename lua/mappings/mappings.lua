@@ -54,3 +54,5 @@ keymap("n", "<leader>f", ":Format<cr>", opts)
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", opts)
 
+-- Buffer Delete --
+keymap("n", "<leader>bd", ":Bdelete<cr>", opts)

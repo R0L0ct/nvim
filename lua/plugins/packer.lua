@@ -44,7 +44,7 @@ use {
 }
 
 -- Close buffers without closing splits --
-use 'qpkorr/vim-bufkill'
+use 'famiu/bufdelete.nvim'
 
 -- Sintaxis_Treesitter --
  use {
@@ -52,6 +52,7 @@ use 'qpkorr/vim-bufkill'
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
 use 'p00f/nvim-ts-rainbow'
+use 'windwp/nvim-ts-autotag'
 
 -- Desarrollo Web --
 use {
@@ -59,9 +60,22 @@ use {
     config = function() require("nvim-autopairs").setup {} end
 }
 use 'norcalli/nvim-colorizer.lua'
-use 'tpope/vim-surround'
-use 'tpope/vim-commentary'
-use 'alvan/vim-closetag'
+use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+})
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
+use "lukas-reineke/indent-blankline.nvim"
 
 -- TEMAS --
 use 'bluz71/vim-moonfly-colors'
