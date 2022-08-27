@@ -52,5 +52,5 @@ keymap("n", "<leader>f", ":Format<cr>", opts)
 
 -- TELESCOPE --
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>", {buffer=0})
+keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", opts)
 

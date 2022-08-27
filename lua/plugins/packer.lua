@@ -22,6 +22,11 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
+-- TOGGLE TERM --
+use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+  require("toggleterm").setup()
+end}
+
 -- STATUS LINE/TABS --
 use {
   'nvim-lualine/lualine.nvim',
