@@ -1,4 +1,3 @@
-
 local set = vim.opt
 
 set.expandtab = false
@@ -27,4 +26,3 @@ set.relativenumber = false
 set.cursorline = true
 
 set.hidden = true
-
