@@ -21,8 +21,11 @@ set.scrolloff = 5
 set.fileencoding = 'utf-8'
 set.termguicolors = true
 
+set.signcolumn = "yes"
+set.undofile = true
 set.number = true
 set.relativenumber = false
 set.cursorline = true
 
 set.hidden = true
+

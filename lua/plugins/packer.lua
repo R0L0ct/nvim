@@ -14,6 +14,14 @@ use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/nvim-cmp'
 
+-- GIT --
+use {
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup()
+  end
+}
+
 -- SNIP --
 use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
@@ -87,6 +95,7 @@ use "lukas-reineke/indent-blankline.nvim"
 use 'bluz71/vim-moonfly-colors'
 use 'tomasr/molokai'
 use 'morhetz/gruvbox'
+use 'EdenEast/nightfox.nvim'
 
 end)
 

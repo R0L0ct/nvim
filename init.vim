@@ -49,6 +49,8 @@ if has("autocmd")
     au BufRead,BufNewFile *.ejs setfiletype html
 endif
 
+
 "Temas
 let g:moonflyItalics = v:false
 colorscheme gruvbox 
+" colorscheme nightfox 
