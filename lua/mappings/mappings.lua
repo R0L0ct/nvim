@@ -1,4 +1,5 @@
 local opts = {noremap = true, silent = true}
+local bufopts = { noremap = true, silent = true, buffer = bufnr }
 local keymap = vim.api.nvim_set_keymap
 
 local term_opts = { silent = true }
@@ -48,11 +49,12 @@ keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 keymap("n", "<leader>nt", ":NvimTreeToggle<cr>", opts)
 
 -- Format --
-keymap("n", "<leader>f", ":Format<cr>", opts)
+keymap("n", "<leader>f", ":Format<cr>", bufopts)
 
 -- TELESCOPE --
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", opts)
+keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", bufopts)
 
 -- Buffer Delete --
 keymap("n", "<leader>bd", ":Bdelete<cr>", opts)
+
