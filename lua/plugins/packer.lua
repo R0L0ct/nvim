@@ -14,6 +14,9 @@ use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/nvim-cmp'
 
+-- IMPATIENT --
+use 'lewis6991/impatient.nvim' --Speed up loading Lua modules in Neovim to improve startup time
+
 -- GIT --
 use {
   'lewis6991/gitsigns.nvim',
