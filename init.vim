@@ -33,8 +33,6 @@ luafile ~/AppData/Local/nvim/lua/init.lua
 "     \ 'coc-lists',
 "     \ 'coc-vimlsp']
 
-"Kite Config
-" let g:kite_supported_languages = ['c', 'cpp', 'cc', 'java']
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = 'C:/Users/Administrator/AppData/Local/Programs/Python/Python310/python.exe'
 let g:ruby_host_prog = 'E:/Ruby31-x64/bin/ruby.exe'
