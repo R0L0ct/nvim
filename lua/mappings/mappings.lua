@@ -58,11 +58,3 @@ keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", bufopts)
 -- Buffer Delete --
 keymap("n", "<leader>bd", ":Bdelete<cr>", opts)
 
--- LuaSnip --
-local ls = require "luasnip"
-vim.keymap.set({ "i", "s" }, "<Tab>", function ()
-	if ls.expand_or_jumpable() then
-		ls.expand_or_jump()	
-	end
-end, {silent = true })
-

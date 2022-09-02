@@ -95,10 +95,25 @@ use {
 }
 use "lukas-reineke/indent-blankline.nvim"
 
+-- WHICH KEY --
+use {
+  "folke/which-key.nvim",
+  config = function()
+    require("which-key").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
+
 -- TEMAS --
-use 'bluz71/vim-moonfly-colors'
-use 'tomasr/molokai'
-use 'morhetz/gruvbox'
+-- use 'bluz71/vim-moonfly-colors'
+use 'Mofiqul/vscode.nvim'
+use 'tanvirtin/monokai.nvim'
+use 'folke/tokyonight.nvim'
+use 'Mofiqul/dracula.nvim'
+use 'ellisonleao/gruvbox.nvim'
 use 'EdenEast/nightfox.nvim'
 
 end)

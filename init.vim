@@ -49,6 +49,5 @@ endif
 
 
 "Temas
-let g:moonflyItalics = v:false
-colorscheme gruvbox 
-" colorscheme nightfox 
+" let g:moonflyItalics = v:false
+" colorscheme gruvbox 
