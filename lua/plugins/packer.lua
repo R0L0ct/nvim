@@ -115,6 +115,7 @@ use 'folke/tokyonight.nvim'
 use 'Mofiqul/dracula.nvim'
 use 'ellisonleao/gruvbox.nvim'
 use 'EdenEast/nightfox.nvim'
+use 'navarasu/onedark.nvim'
 
 end)
 
