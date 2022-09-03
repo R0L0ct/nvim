@@ -14,6 +14,8 @@ use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/nvim-cmp'
 
+use('jose-elias-alvarez/null-ls.nvim')
+
 -- IMPATIENT --
 use 'lewis6991/impatient.nvim' --Speed up loading Lua modules in Neovim to improve startup time
 
@@ -119,6 +121,7 @@ use 'Mofiqul/dracula.nvim'
 use 'ellisonleao/gruvbox.nvim'
 use 'EdenEast/nightfox.nvim'
 use 'navarasu/onedark.nvim'
+-- use 'martinsione/darkplus.nvim'
 
 end)
 
