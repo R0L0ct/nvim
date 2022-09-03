@@ -1,10 +1,10 @@
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 local bufopts = { noremap = true, silent = true, buffer = bufnr }
 local keymap = vim.api.nvim_set_keymap
 
 local term_opts = { silent = true }
 
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- Normal --
 -- Buffer navigation
@@ -57,4 +57,3 @@ keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", bufopts)
 
 -- Buffer Delete --
 keymap("n", "<leader>bd", ":Bdelete<cr>", opts)
-
