@@ -25,6 +25,9 @@ use {
   end
 }
 
+-- DEV ICONS --
+use 'kyazdani42/nvim-web-devicons'
+
 -- SNIP --
 use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
@@ -96,16 +99,16 @@ use {
 use "lukas-reineke/indent-blankline.nvim"
 
 -- WHICH KEY --
-use {
-  "folke/which-key.nvim",
-  config = function()
-    require("which-key").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
-}
+-- use {
+--   "folke/which-key.nvim",
+--   config = function()
+--     require("which-key").setup {
+--       -- your configuration comes here
+--       -- or leave it empty to use the default settings
+--       -- refer to the configuration section below
+--     }
+--   end
+-- }
 
 -- TEMAS --
 -- use 'bluz71/vim-moonfly-colors'
