@@ -18,7 +18,7 @@ set.splitbelow = true
 set.splitright = true
 set.wrap = true
 set.scrolloff = 5
-set.fileencoding = 'utf-8'
+set.fileencoding = "utf-8"
 set.termguicolors = true
 
 set.signcolumn = "yes"
@@ -28,4 +28,3 @@ set.relativenumber = false
 set.cursorline = true
 
 set.hidden = true
-

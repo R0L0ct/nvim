@@ -8,7 +8,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier,
-		diagnostics.eslint,
+		-- diagnostics.eslint,
 		formatting.stylua,
 	},
 	on_attach = function(client, bufnr)
