@@ -1,20 +1,21 @@
-require  "mappings.mappings"
-require  "settings.settings"
-require  "plugins.packer"
-require  "plugins.colorscheme"
-require  "plugins.plug-colorizer"
-require  "plugins.treesitter"
-require  "plugins.lualine"
-require  "plugins.nvim-tree"
-require  "plugins.mason"
-require  "plugins.lsp-config"
-require  "plugins.emmet-lsp"
-require  "mappings.lsp-maps"
-require  "mappings.luasnip-maps"
-require  "plugins.luasnip"
-require  "plugins.toggle-terminal"
-require  "plugins.indent"
-require  "plugins.illuminate"
-require  "plugins.impatient"
-require  "mappings.cmp-maps"
-require  "plugins.null-ls"
+require("mappings.mappings")
+require("settings.settings")
+require("plugins.packer")
+require("plugins.colorscheme")
+require("plugins.plug-colorizer")
+require("plugins.treesitter")
+require("plugins.lualine")
+require("plugins.nvim-tree")
+require("plugins.mason")
+require("plugins.lsp-config")
+require("plugins.emmet-lsp")
+require("mappings.lsp-maps")
+require("mappings.luasnip-maps")
+require("plugins.luasnip")
+require("plugins.toggle-terminal")
+require("plugins.indent")
+require("plugins.illuminate")
+require("plugins.impatient")
+require("mappings.cmp-maps")
+require("plugins.null-ls")
+require("plugins.rest")
