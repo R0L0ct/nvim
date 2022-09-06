@@ -131,7 +131,7 @@ packer.startup(function(use)
 	-- }
 
 	-- TEMAS --
-	-- use 'bluz71/vim-moonfly-colors'
+	use("bluz71/vim-moonfly-colors")
 	use("Mofiqul/vscode.nvim")
 	use("tanvirtin/monokai.nvim")
 	use("folke/tokyonight.nvim")
@@ -139,5 +139,5 @@ packer.startup(function(use)
 	use("ellisonleao/gruvbox.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("navarasu/onedark.nvim")
-	-- use 'martinsione/darkplus.nvim'
+	use("shaunsingh/nord.nvim")
 end)

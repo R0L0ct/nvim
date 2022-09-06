@@ -9,7 +9,7 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		-- diagnostics.eslint,
-		formatting.stylua,
+		-- formatting.stylua,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

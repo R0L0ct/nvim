@@ -83,6 +83,12 @@ require("onedark").setup({
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_comments = false
 ------------------------------
+-- NORD --
+vim.g.nord_italic = false
+
+-- MOONFLY --
+vim.g.moonflyItalics = false
+
 -- Temas ---------------------
 vim.cmd("colorscheme vscode")
 ------------------------------
