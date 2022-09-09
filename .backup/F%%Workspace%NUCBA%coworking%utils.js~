@@ -1,0 +1,108 @@
+const getNextDay = () => {
+	let tomorrow = new Date();
+
+	tomorrow.setDate(tomorrow.getDate() + 1);
+
+	return tomorrow;
+};
+
+const padTo2Digits = (numero) => {
+	return numero.toString().padStart(2, "0");
+};
+
+const getTomorrowDate = () => {
+	const year = getNextDay().getFullYear();
+	const day = getNextDay().getDate();
+	const month = getNextDay().getMonth() + 1;
+
+	return `${year}-${padTo2Digits(month)}-${padTo2Digits(day)}`;
+};
+
+const setDateIntervals = () => {
+	dateInput.value = getTomorrowDate();
+	dateInput.min = getTomorrowDate();
+	dateInput.max = getNextDay().getFullYear() + "-12-31";
+};
+
+const setCardBackground = (quantity) => {
+	return quantity === "mas10"
+		? "violet-card"
+		: quantity === "510"
+			? "red-card"
+			: "black-card";
+};
+
+const setTimeBackground = (quantity) => {
+	return quantity === "menos5" ? "red-card" : "black-card";
+};
+
+const setDateBackground = (quantity) => {
+	return quantity === "mas10" ? "red-card" : "black-card";
+};
+
+const setCardImg = (quantity) => {
+	return quantity === "mas10"
+		? "img/server.png"
+		: quantity === "510"
+			? "img/laptop.png"
+			: "img/lupa.png";
+};
+
+const setCardImgClass = (quantity) => {
+	return quantity === "mas10"
+		? "server-img"
+		: quantity === "510"
+			? "laptop-img"
+			: "lupa-img";
+};
+
+const getRadioValue = (inputs) => {
+	const checkedInput = [...inputs].find((input) => input.checked);
+
+	return checkedInput.value;
+};
+
+const getCheckedOptions = (inputs) => {
+	const checkedOptions = [...inputs]
+		.filter((input) => input.checked)
+		.map((option) => option.value);
+	return checkedOptions;
+};
+
+const formatDate = (date) => {
+	const splitDate = date.split("-").reverse().join("/");
+	return splitDate;
+};
+
+const isEmpty = (valor) => {
+	valor === "" ? true : false;
+};
+
+const showError = (input, message) => {
+	const formField = input.parentElement;
+	formField.classList.add("error");
+	const error = formField.querySelector("small");
+	error.textContent = message;
+};
+
+const clearError = () => {
+	const formField = input.parentElement;
+	formField.classList.remove("error");
+	const error = formField.querySelector("small");
+	error.textContent = "";
+};
+
+const isEmailValid = (email) => {
+	const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+	return emailRegex.test(email);
+};
+
+const isPhoneValid = (phone) => {
+	const phoneRegex =
+		/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
+
+	return phoneRegex.test(phone);
+};
+
+const isValidDate = () => { };
