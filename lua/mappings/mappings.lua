@@ -57,3 +57,6 @@ keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", bufopts)
 
 -- Buffer Delete --
 keymap("n", "<leader>bd", ":Bdelete<cr>", opts)
+
+-- MINIMAP --
+keymap("n", "<leader>mm", "<cmd>MinimapToggle<cr>", opts)

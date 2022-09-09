@@ -130,6 +130,12 @@ packer.startup(function(use)
 	--   end
 	-- }
 
+	-- MINIMAP --
+	use("wfxr/minimap.vim")
+
+	-- SILICON --
+	use("segeljakt/vim-silicon")
+
 	-- TEMAS --
 	use("bluz71/vim-moonfly-colors")
 	use("Mofiqul/vscode.nvim")
