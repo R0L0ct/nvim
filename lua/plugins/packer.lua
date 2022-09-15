@@ -130,6 +130,9 @@ packer.startup(function(use)
 	--   end
 	-- }
 
+	-- MATCH-UP --
+	use("andymass/vim-matchup")
+
 	-- MINIMAP --
 	use("wfxr/minimap.vim")
 

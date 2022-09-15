@@ -23,4 +23,10 @@ require("nvim-treesitter.configs").setup({
 	autotag = {
 		enable = true,
 	},
+	matchup = {
+		enable = true, -- mandatory, false will disable the whole extension
+		disable_virtual_text = true,
+		-- disable = { "" }, -- optional, list of language that will be disabled
+		-- [options]
+	},
 })

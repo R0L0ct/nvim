@@ -36,7 +36,7 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Terminal --
--- Better termianl navigation --
+-- Better terminal navigation --
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
@@ -54,9 +54,11 @@ keymap("n", "<leader>f", ":Format<cr>", bufopts)
 -- TELESCOPE --
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", bufopts)
+keymap("n", "<leader>tk", "<cmd>Telescope keymaps<cr>", bufopts)
 
 -- Buffer Delete --
 keymap("n", "<leader>bd", ":Bdelete<cr>", opts)
 
 -- MINIMAP --
 keymap("n", "<leader>mm", "<cmd>MinimapToggle<cr>", opts)
+keymap("n", "<leader>mr", "<cmd>MinimapRescan<cr>", opts)
