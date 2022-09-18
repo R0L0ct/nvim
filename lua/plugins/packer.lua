@@ -130,16 +130,11 @@ packer.startup(function(use)
 	--   end
 	-- }
 
-	use({
-		"ahmedkhalf/project.nvim",
-		config = function()
-			require("project_nvim").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
-	})
+	-- Project --
+	use("ahmedkhalf/project.nvim")
+
+	-- Lazy Git --
+	use("kdheepak/lazygit.nvim")
 
 	-- MATCH-UP --
 	use("andymass/vim-matchup")
