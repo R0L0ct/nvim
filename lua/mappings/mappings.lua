@@ -56,6 +56,12 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", bufopts)
 keymap("n", "<leader>tk", "<cmd>Telescope keymaps<cr>", opts)
 keymap("n", "<leader>tp", "<cmd>Telescope projects<cr>", opts)
+keymap("n", "<leader>tb", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
+
+-- LAZAY GIT --
+keymap("n", "<leader>lg", "<cmd>LazyGit<cr>", opts)
+
 
 -- Buffer Delete --
 keymap("n", "<leader>bd", ":Bdelete<cr>", opts)
