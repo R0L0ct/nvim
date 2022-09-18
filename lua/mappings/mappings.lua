@@ -54,7 +54,8 @@ keymap("n", "<leader>f", ":Format<cr>", bufopts)
 -- TELESCOPE --
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", bufopts)
-keymap("n", "<leader>tk", "<cmd>Telescope keymaps<cr>", bufopts)
+keymap("n", "<leader>tk", "<cmd>Telescope keymaps<cr>", opts)
+keymap("n", "<leader>tp", "<cmd>Telescope projects<cr>", opts)
 
 -- Buffer Delete --
 keymap("n", "<leader>bd", ":Bdelete<cr>", opts)
