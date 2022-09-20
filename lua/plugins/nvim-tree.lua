@@ -13,9 +13,9 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 	sort_by = "name",
 	root_dirs = {},
 	prefer_startup_root = false,
-	sync_root_with_cwd = false, --Project.nvim opt
+	sync_root_with_cwd = true, --Project.nvim opt
 	reload_on_bufenter = false,
-	respect_buf_cwd = false, --Project.nvim opt
+	respect_buf_cwd = true, --Project.nvim opt
 	on_attach = "disable", -- function(bufnr). If nil, will use the deprecated mapping strategy
 	remove_keymaps = false, -- boolean (disable totally or not) or list of key (lhs)
 	view = {
