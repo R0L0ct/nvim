@@ -43,9 +43,9 @@ let g:ruby_host_prog = 'E:/Ruby31-x64/bin/neovim-ruby-host'
 " map <F5> :!g++ -g % -o %:r <CR>       
 
 "MINIMAP
-let g:minimap_width = 10
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
+" let g:minimap_width = 10
+" let g:minimap_auto_start = 1
+" let g:minimap_auto_start_win_enter = 1
 
 "EJS_FILETYPE
 if has("autocmd")
