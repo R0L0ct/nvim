@@ -40,7 +40,7 @@ let g:ruby_host_prog = 'E:/Ruby31-x64/bin/ruby.exe'
 let g:ruby_host_prog = 'E:/Ruby31-x64/bin/neovim-ruby-host'
 
 "Gcc - compilador 
-map <F5> :!g++ -g % -o %:r <CR>       
+" map <F5> :!g++ -g % -o %:r <CR>       
 
 "MINIMAP
 let g:minimap_width = 10
