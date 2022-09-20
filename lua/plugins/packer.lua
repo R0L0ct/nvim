@@ -54,6 +54,7 @@ packer.startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+	use("nvim-lua/popup.nvim")
 
 	-- TOGGLE TERM --
 	use({
@@ -129,6 +130,19 @@ packer.startup(function(use)
 	--     }
 	--   end
 	-- }
+
+	-- DAP --
+	use("mfussenegger/nvim-dap")
+	use("rcarriga/nvim-dap-ui")
+	use("theHamsta/nvim-dap-virtual-text")
+	use("nvim-telescope/telescope-dap.nvim")
+	use("mxsdev/nvim-dap-vscode-js")
+	use {
+  "microsoft/vscode-js-debug",
+  opt = true,
+  run = "npm install --legacy-peer-deps && npm run compile" 
+	}
+	
 
 	-- Project --
 	use("ahmedkhalf/project.nvim")
