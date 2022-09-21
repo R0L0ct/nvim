@@ -140,9 +140,8 @@ packer.startup(function(use)
 	use {
   "microsoft/vscode-js-debug",
   opt = true,
-  run = "npm install --legacy-peer-deps && npm run compile" 
+  run = "npm install --legacy-peer-deps && npm run compile"
 	}
-	
 
 	-- Project --
 	use("ahmedkhalf/project.nvim")
@@ -160,13 +159,15 @@ packer.startup(function(use)
 	use("segeljakt/vim-silicon")
 
 	-- TEMAS --
-	use("bluz71/vim-moonfly-colors")
+	use("LunarVim/darkplus.nvim")
+	use("lunarvim/onedarker.nvim")
+	-- use("bluz71/vim-moonfly-colors")
 	use("Mofiqul/vscode.nvim")
-	use("tanvirtin/monokai.nvim")
-	use("folke/tokyonight.nvim")
-	use("Mofiqul/dracula.nvim")
-	use("ellisonleao/gruvbox.nvim")
-	use("EdenEast/nightfox.nvim")
-	use("navarasu/onedark.nvim")
-	use("shaunsingh/nord.nvim")
+	-- use("tanvirtin/monokai.nvim")
+	-- use("folke/tokyonight.nvim")
+	-- use("Mofiqul/dracula.nvim")
+	-- use("ellisonleao/gruvbox.nvim")
+	-- use("EdenEast/nightfox.nvim")
+	-- use("navarasu/onedark.nvim")
+	-- use("shaunsingh/nord.nvim")
 end)
