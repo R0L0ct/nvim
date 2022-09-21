@@ -90,5 +90,25 @@ vim.g.nord_italic = false
 vim.g.moonflyItalics = false
 
 -- Temas ---------------------
-vim.cmd("colorscheme vscode")
+-- vim.cmd("colorscheme vscode")
 ------------------------------
+
+local colorscheme = "darkplus"
+
+vim.g.onedarker_italic_keywords = false
+
+vim.g.onedarker_italic_functions = false
+
+vim.g.onedarker_italic_comments = false
+
+vim.g.darkplus_italic_comments = false
+
+vim.g.onedarker_italic_loops = false
+
+vim.g.onedarker_italic_conditionals = false
+
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+  -- vim.notify("colorscheme " .. colorscheme .. " not found!")
+  return
+end
