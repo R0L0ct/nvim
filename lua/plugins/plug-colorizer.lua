@@ -1,5 +1,5 @@
 require 'colorizer'.setup(
-	{'css';'html';},
+	{'css';},
 	{
 	RGB      = true;         -- #RGB hex codes
 	RRGGBB   = true;         -- #RRGGBB hex codes
