@@ -12,7 +12,6 @@ vim.g.onedarker_italic_loops = false
 vim.g.onedarker_italic_conditionals = false
 
 --darkplus
---------------------------------------
 vim.g.darkplus_italic_keywords = false
 
 vim.g.darkplus_italic_functions = false
