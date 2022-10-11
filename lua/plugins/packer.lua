@@ -159,7 +159,7 @@ packer.startup(function(use)
 	use("segeljakt/vim-silicon")
 
 	-- TEMAS --
-	use("LunarVim/darkplus.nvim")
+	use("lunarvim/darkplus.nvim")
 	use("lunarvim/onedarker.nvim")
 	-- use("bluz71/vim-moonfly-colors")
 	use("Mofiqul/vscode.nvim")
