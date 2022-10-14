@@ -72,6 +72,12 @@ packer.startup(function(use)
 	})
 	-- use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
+	--TABLINE
+	use({
+  'kdheepak/tabline.nvim',
+	requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
+	})
+
 	-- NVIM TREE --
 	use({
 		"kyazdani42/nvim-tree.lua",
