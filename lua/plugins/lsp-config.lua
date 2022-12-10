@@ -6,7 +6,7 @@ require'cmp'.setup {
 }
 
 --Native LSP Setup
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
  require'lspconfig'.html.setup {
    capabilities = capabilities,
@@ -14,7 +14,11 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
  require'lspconfig'.cssls.setup {
    capabilities = capabilities,
- }
+}
+
+require'lspconfig'.cssmodules_ls.setup {
+   capabilities = capabilities,
+}
 
  require'lspconfig'.tsserver.setup {
    capabilities = capabilities,
@@ -37,6 +41,10 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
  }
 
  require'lspconfig'.sqls.setup{
+   capabilities = capabilities,
+ }
+
+ require'lspconfig'.angularls.setup{
    capabilities = capabilities,
  }
 

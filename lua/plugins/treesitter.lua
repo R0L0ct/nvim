@@ -1,5 +1,5 @@
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "cpp", "css", "javascript", "html", "java", "lua", "sql", "rust", "http", "json" },
+	ensure_installed = { "c", "cpp","c_sharp", "css", "javascript","typescript","tsx", "html", "java", "lua", "sql", "rust", "http", "json" },
 	sync_install = false,
 	auto_install = true,
 	ignore_install = { "" },
@@ -29,4 +29,8 @@ require("nvim-treesitter.configs").setup({
 		-- disable = { "" }, -- optional, list of language that will be disabled
 		-- [options]
 	},
+	context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  },
 })

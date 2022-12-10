@@ -13,6 +13,8 @@ luafile ~/AppData/Local/nvim/lua/init.lua
 "==============================================
 " source ~/AppData/Local/nvim/coc.vim
 
+
+
 " let g:coc_global_extensions = [
 "     \ 'coc-json',
 "     \ 'coc-phpls',

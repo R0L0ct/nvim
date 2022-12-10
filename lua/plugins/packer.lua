@@ -74,8 +74,8 @@ packer.startup(function(use)
 
 	--TABLINE
 	use({
-  'kdheepak/tabline.nvim',
-	requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
+  	'kdheepak/tabline.nvim',
+		requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
 	})
 
 	-- NVIM TREE --
@@ -99,6 +99,7 @@ packer.startup(function(use)
 	})
 	use("p00f/nvim-ts-rainbow")
 	use("windwp/nvim-ts-autotag")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Desarrollo Web --
 	use({
@@ -117,12 +118,7 @@ packer.startup(function(use)
 			})
 		end,
 	})
-	use({
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	})
+	use("numToStr/Comment.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- WHICH KEY --
