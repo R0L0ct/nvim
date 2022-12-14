@@ -59,6 +59,10 @@ keymap("n", "<leader>tp", "<cmd>Telescope projects<cr>", opts)
 keymap("n", "<leader>tb", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>tg", "<cmd>Telescope live_grep<cr>", opts)
 
+-- UNDOTREE --
+
+keymap("n", "<leader>ut", "<cmd>UndotreeToggle<cr>", opts)
+
 -- LAZAY GIT --
 keymap("n", "<leader>lg", "<cmd>LazyGit<cr>", opts)
 

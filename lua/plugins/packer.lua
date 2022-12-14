@@ -12,11 +12,22 @@ packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
 	use("hrsh7th/nvim-cmp")
+	use({"glepnir/lspsaga.nvim", branch = "main"})
+	-- LSP-ICONS --
+	use("onsails/lspkind.nvim")
 
 	-- NULL-LS --
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
+	})
+
+	use ({
+    "brymer-meneses/grammar-guard.nvim",
+    requires = {
+        "neovim/nvim-lspconfig",
+        "williamboman/nvim-lsp-installer"
+    }
 	})
 
 	-- REST --
@@ -160,16 +171,20 @@ packer.startup(function(use)
 	-- SILICON --
 	use("segeljakt/vim-silicon")
 
+	-- UNDOTREE --
+	use("mbbill/undotree")
+
+
 	-- TEMAS --
 	use("lunarvim/darkplus.nvim")
 	use("lunarvim/onedarker.nvim")
 	use("Mofiqul/vscode.nvim")
 	-- use("bluz71/vim-moonfly-colors")
 	-- use("tanvirtin/monokai.nvim")
-	-- use("folke/tokyonight.nvim")
+	use("folke/tokyonight.nvim")
 	use("Mofiqul/dracula.nvim")
 	use("ellisonleao/gruvbox.nvim")
 	use("EdenEast/nightfox.nvim")
-	-- use("navarasu/onedark.nvim")
+	use("navarasu/onedark.nvim")
 	use("shaunsingh/nord.nvim")
 end)
