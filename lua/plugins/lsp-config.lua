@@ -8,44 +8,88 @@ require'cmp'.setup {
 --Native LSP Setup
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+
+local keymap = vim.keymap
+local on_attach = function(client)
+
+	if client.name == "tsserver" then
+		keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
+	end
+end
+
+local typescript_setup, typescript = pcall(require, "typescript")
+if not typescript_setup then
+	return
+end
+
  require'lspconfig'.html.setup {
    capabilities = capabilities,
+		 on_attach = on_attach
  }
 
  require'lspconfig'.cssls.setup {
    capabilities = capabilities,
+		 on_attach = on_attach
 }
 
 require'lspconfig'.cssmodules_ls.setup {
    capabilities = capabilities,
+		 on_attach = on_attach
 }
 
- require'lspconfig'.tsserver.setup {
-   capabilities = capabilities,
- }
+ -- require'lspconfig'.tsserver.setup {
+ --   capabilities = capabilities,
+ -- }
+ typescript.setup({
+	 server = {
+		 capabilities = capabilities,
+		 on_attach = on_attach
+	 }
+ })
 
  require'lspconfig'.sumneko_lua.setup {
    capabilities = capabilities,
+		 on_attach = on_attach,
+		 settings = {
+			 Lua = {
+				 -- make the language server recognize "vim" global
+				 diagnostics = {
+					 globals = { "vim" },
+				 },
+				 workspace = {
+					 -- make language server aware of runtime files
+					 library = {
+						 [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+						 [vim.fn.stdpath("config") .. "/lua"] = true,
+					 },
+				 },
+			 },
+		 },
  }
 
  require'lspconfig'.vimls.setup {
    capabilities = capabilities,
+		 on_attach = on_attach
  }
 
  require'lspconfig'.clangd.setup {
    capabilities = capabilities,
+		 on_attach = on_attach
  }
 
  require'lspconfig'.jdtls.setup {
    capabilities = capabilities,
+		 on_attach = on_attach
  }
 
  require'lspconfig'.sqls.setup{
    capabilities = capabilities,
+		 on_attach = on_attach
  }
 
  require'lspconfig'.angularls.setup{
    capabilities = capabilities,
+		 on_attach = on_attach
  }
 
  -- Setup nvim-cmp.

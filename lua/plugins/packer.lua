@@ -16,6 +16,8 @@ packer.startup(function(use)
 	-- LSP-ICONS --
 	use("onsails/lspkind.nvim")
 
+	use("jose-elias-alvarez/typescript.nvim")
+
 	-- NULL-LS --
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
@@ -179,6 +181,7 @@ packer.startup(function(use)
 	use("lunarvim/darkplus.nvim")
 	use("lunarvim/onedarker.nvim")
 	use("Mofiqul/vscode.nvim")
+	use("bluz71/vim-nightfly-colors")
 	-- use("bluz71/vim-moonfly-colors")
 	-- use("tanvirtin/monokai.nvim")
 	use("folke/tokyonight.nvim")

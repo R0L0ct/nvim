@@ -68,7 +68,7 @@ vim.g.moonflyItalics = false
 -- vim.cmd("colorscheme vscode")
 ------------------------------
 
-local colorscheme = "nord"
+local colorscheme = "nightfly"
 
 vim.g.onedarker_italic_keywords = false
 
