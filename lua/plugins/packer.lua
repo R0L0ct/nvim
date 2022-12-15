@@ -12,7 +12,7 @@ packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
 	use("hrsh7th/nvim-cmp")
-	use({"glepnir/lspsaga.nvim", branch = "main"})
+	use({ "glepnir/lspsaga.nvim", branch = "main" })
 	-- LSP-ICONS --
 	use("onsails/lspkind.nvim")
 
@@ -23,13 +23,14 @@ packer.startup(function(use)
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
 	})
+	use("jayp0521/mason-null-ls.nvim")
 
-	use ({
-    "brymer-meneses/grammar-guard.nvim",
-    requires = {
-        "neovim/nvim-lspconfig",
-        "williamboman/nvim-lsp-installer"
-    }
+	use({
+		"brymer-meneses/grammar-guard.nvim",
+		requires = {
+			"neovim/nvim-lspconfig",
+			"williamboman/nvim-lsp-installer",
+		},
 	})
 
 	-- REST --
@@ -87,8 +88,8 @@ packer.startup(function(use)
 
 	--TABLINE
 	use({
-  	'kdheepak/tabline.nvim',
-		requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
+		"kdheepak/tabline.nvim",
+		requires = { { "hoob3rt/lualine.nvim", opt = true }, { "kyazdani42/nvim-web-devicons", opt = true } },
 	})
 
 	-- NVIM TREE --
@@ -152,11 +153,11 @@ packer.startup(function(use)
 	use("theHamsta/nvim-dap-virtual-text")
 	use("nvim-telescope/telescope-dap.nvim")
 	use("mxsdev/nvim-dap-vscode-js")
-	use {
-  "microsoft/vscode-js-debug",
-  opt = true,
-  run = "npm install --legacy-peer-deps && npm run compile"
-	}
+	use({
+		"microsoft/vscode-js-debug",
+		opt = true,
+		run = "npm install --legacy-peer-deps && npm run compile",
+	})
 
 	-- Project --
 	use("ahmedkhalf/project.nvim")
@@ -175,7 +176,6 @@ packer.startup(function(use)
 
 	-- UNDOTREE --
 	use("mbbill/undotree")
-
 
 	-- TEMAS --
 	use("lunarvim/darkplus.nvim")
