@@ -1,4 +1,16 @@
-require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
+local setup, nvimtree = pcall(require, "nvim-tree")
+if not setup then
+	return
+end
+
+-- recommended settings from nvim-tree documentation
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- change color for arrows in tree to light blue
+vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
+
+nvimtree.setup({ -- BEGIN_DEFAULT_OPTS
 	auto_reload_on_write = true,
 	create_in_closed_folder = false,
 	disable_netrw = false,
@@ -81,8 +93,8 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 				symlink = "",
 				bookmark = "",
 				folder = {
-					arrow_closed = "",
-					arrow_open = "",
+					arrow_closed = "",
+					arrow_open = "",
 					default = "",
 					open = "",
 					empty = "",
