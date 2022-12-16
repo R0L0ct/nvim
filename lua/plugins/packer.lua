@@ -25,14 +25,6 @@ packer.startup(function(use)
 	})
 	use("jayp0521/mason-null-ls.nvim")
 
-	use({
-		"brymer-meneses/grammar-guard.nvim",
-		requires = {
-			"neovim/nvim-lspconfig",
-			"williamboman/nvim-lsp-installer",
-		},
-	})
-
 	-- REST --
 	use({
 		"NTBBloodbath/rest.nvim",
@@ -185,6 +177,7 @@ packer.startup(function(use)
 	-- use("bluz71/vim-moonfly-colors")
 	-- use("tanvirtin/monokai.nvim")
 	use("folke/tokyonight.nvim")
+	use("yeddaif/neovim-purple")
 	use("Mofiqul/dracula.nvim")
 	use("ellisonleao/gruvbox.nvim")
 	use("EdenEast/nightfox.nvim")
