@@ -68,7 +68,6 @@ vim.g.moonflyItalics = false
 -- vim.cmd("colorscheme vscode")
 ------------------------------
 
-local colorscheme = "nord"
 
 vim.g.onedarker_italic_keywords = false
 
@@ -82,8 +81,14 @@ vim.g.onedarker_italic_loops = false
 
 vim.g.onedarker_italic_conditionals = false
 
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+
+local colorscheme = "nightfly"
+
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
-  -- vim.notify("colorscheme " .. colorscheme .. " not found!")
+	print("Colorscheme not found!")
   return
 end

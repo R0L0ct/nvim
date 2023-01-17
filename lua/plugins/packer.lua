@@ -13,6 +13,7 @@ packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline")
 	use("hrsh7th/nvim-cmp")
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
+
 	-- LSP-ICONS --
 	use("onsails/lspkind.nvim")
 
@@ -166,8 +167,11 @@ packer.startup(function(use)
 	-- SILICON --
 	use("segeljakt/vim-silicon")
 
-	-- UNDOTREE --
-	use("mbbill/undotree")
+	-- DART DEV --
+	use("dart-lang/dart-vim-plugin")
+	use("natebosch/vim-lsc")
+	use("natebosch/vim-lsc-dart")
+	use("thosakwe/vim-flutter")
 
 	-- TEMAS --
 	use("lunarvim/darkplus.nvim")
@@ -177,7 +181,6 @@ packer.startup(function(use)
 	-- use("bluz71/vim-moonfly-colors")
 	-- use("tanvirtin/monokai.nvim")
 	use("folke/tokyonight.nvim")
-	use("yeddaif/neovim-purple")
 	use("Mofiqul/dracula.nvim")
 	use("ellisonleao/gruvbox.nvim")
 	use("EdenEast/nightfox.nvim")
