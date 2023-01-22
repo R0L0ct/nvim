@@ -1,6 +1,6 @@
 require("mappings.mappings")
 require("settings.settings")
-require("plugins.packer")
+require("plugins.lazy")
 require("plugins.colorscheme")
 -- require("plugins.lunar-colorscheme")
 require("plugins.plug-colorizer")
@@ -25,3 +25,5 @@ require("plugins.project")
 require("plugins.nvim-dap")
 require("plugins.tabline")
 require("plugins.comment")
+
+-- require("plugins.packer")
