@@ -73,3 +73,12 @@ keymap("n", "<leader>bd", ":Bdelete<cr>", opts)
 -- MINIMAP --
 keymap("n", "<leader>mm", "<cmd>MinimapToggle<cr>", opts)
 keymap("n", "<leader>mr", "<cmd>MinimapRescan<cr>", opts)
+
+
+-- Java
+local spring_boot_run = 'mvn spring-boot:run -Dspring-boot.run.profiles=local'
+local command = ':lua require("toggleterm").exec("' .. spring_boot_run .. '")<CR>'
+keymap('n', '<leader>sr', command, opts)
+keymap('n', '<leader>oi', ':lua require("jdtls").organize_imports()<CR>', opts)
+keymap('n', '<leader>jc', ':lua require("jdtls").compile("full")<CR>', opts)
+

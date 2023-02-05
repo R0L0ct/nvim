@@ -1,4 +1,5 @@
-set backupdir=~/AppData/Local/nvim/.backup//
+" set backupdir=~/AppData/Local/nvim/.backup//
+
 "===================================================================================
 " Plugins
 "===================================================================================
@@ -53,7 +54,3 @@ if has("autocmd")
     au BufRead,BufNewFile *.ejs setfiletype html
 endif
 
-
-"Temas
-" let g:moonflyItalics = v:false
-" colorscheme gruvbox 

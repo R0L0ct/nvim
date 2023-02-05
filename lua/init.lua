@@ -25,5 +25,3 @@ require("plugins.project")
 require("plugins.nvim-dap")
 require("plugins.tabline")
 require("plugins.comment")
-
--- require("plugins.packer")
