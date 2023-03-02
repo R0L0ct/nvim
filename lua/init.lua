@@ -1,4 +1,5 @@
 require("mappings.mappings")
+require("mappings.java-maps")
 require("settings.settings")
 require("plugins.lazy")
 require("plugins.colorscheme")

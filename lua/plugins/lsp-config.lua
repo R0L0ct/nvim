@@ -71,6 +71,16 @@ lspconfig["tailwindcss"].setup({
   on_attach = on_attach,
 })
 
+lspconfig["pyright"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+lspconfig["docker_compose_language_service"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
 typescript.setup({
 	server = {
 		capabilities = capabilities,
@@ -78,7 +88,7 @@ typescript.setup({
 	},
 })
 
-lspconfig["sumneko_lua"].setup({
+lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = {
@@ -119,6 +129,11 @@ lspconfig["sqls"].setup({
 })
 
 lspconfig["angularls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["yamlls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
